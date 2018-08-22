@@ -2,7 +2,9 @@
 systemctl status mariadb.service | grep 'active (running)' > /dev/null 2>&1
 if [ $? != 0 ]
 then
-echo "not running"
+echo "Service not running"
+exit 2
 else
-echo "running"
+echo "Service running"
+exit 0
 fi
