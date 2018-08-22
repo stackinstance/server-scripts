@@ -1,0 +1,15 @@
+source machine:
+ssh-keygen -t rsa -C "your.email@example.com" -b 4096
+cat ~/.ssh/id_rsa.pub
+
+copy key
+
+destination machine:
+# ssh to macbhine
+# /home/USER
+mkdir .ssh
+vi .ssh/authorized_keys
+
+paste key
+
+chmod 700 .ssh; chmod 640 .ssh/authorized_keys
