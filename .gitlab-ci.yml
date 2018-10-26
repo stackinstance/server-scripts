@@ -1,0 +1,10 @@
+deploy to test:
+  stage: deploy
+  script: bash /home/gitlab-runner/gitlab_deploy.sh project develop
+  only:
+    - develop
+  environment:
+    name: test
+    url: https://my.url
+  tags:
+    - runner
